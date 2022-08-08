@@ -1,0 +1,1 @@
+export { dirname, filename } from './src/dirname.ts'

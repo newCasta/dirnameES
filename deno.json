@@ -1,0 +1,9 @@
+{
+    "test": {
+        "files": {
+            "include": [
+                "test.ts"
+            ]
+        }
+    }
+}
