@@ -6,7 +6,7 @@ Deno.test('dirname', () => {
     const __dirname = dirname(import.meta)
 
     console.log(`${cyan(bold("Dirname"))}: ${underline(__dirname)}`)
-    assertEquals(/\/test/.test(__dirname), true)
+    assertEquals(__dirname.split('\\').at(-1), 'dirname-es')
 })
 
 
@@ -14,5 +14,5 @@ Deno.test('filename', () => {
     const __filename = filename(import.meta)
 
     console.log(`${cyan(bold("Filename"))}: ${underline(__filename)}`)
-    assertEquals(/\/test\/test.ts$/.test(__filename), true)
+    assertEquals(__filename.split('\\').at(-1), 'test.ts')
 })
